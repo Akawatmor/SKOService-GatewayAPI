@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  title: Citizen Registry API
+  version: 1.0.0
+servers:
+  - url: https://jsonplaceholder.typicode.com
+paths:
+  /users:
+    get:
+      summary: Fetch users
+      responses:
+        '200':
+          description: User list
+  /users/{id}:
+    get:
+      summary: Fetch user by id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User detail

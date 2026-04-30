@@ -1,0 +1,58 @@
+.hidden { display: none !important; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.w-fit { width: fit-content; }
+.w-full { width: 100%; }
+.h-fit { height: fit-content; }
+.min-w-0 { min-width: 0; }
+.text-sm { font-size: 0.875rem; line-height: 1.5; }
+.\!items-start { align-items: flex-start !important; }
+.\!text-4xl { font-size: 2.25rem !important; line-height: 1.15 !important; }
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:col-span-2 { grid-column: span 2 / span 2; }
+}
+
+@media (min-width: 1024px) {
+    .lg\:hidden { display: none !important; }
+    .lg\:flex-row { flex-direction: row; }
+    .lg\:\!flex-row { flex-direction: row !important; }
+    .lg\:items-center { align-items: center; }
+    .lg\:items-start { align-items: flex-start; }
+    .lg\:justify-between { justify-content: space-between; }
+    .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lg\:grid-cols-\[300px\,1fr\] { grid-template-columns: 300px minmax(0, 1fr); }
+    .lg\:col-span-1 { grid-column: span 1 / span 1; }
+    .lg\:col-span-2 { grid-column: span 2 / span 2; }
+    .lg\:py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .lg\:py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .lg\:w-80 { width: 20rem; }
+}
+
+@media (min-width: 1280px) {
+    .xl\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .xl\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

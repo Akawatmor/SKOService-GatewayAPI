@@ -1,0 +1,13 @@
+{
+    "name": "skoservice/gatewayapi",
+    "description": "GatewayAPI hybrid API hub for catalog, proxy, and file snapshot delivery.",
+    "type": "project",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "GatewayAPI\\": "src/"
+        }
+    }
+}

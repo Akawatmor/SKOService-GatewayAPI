@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS api_services (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT NOT NULL,
+    slug            TEXT NOT NULL UNIQUE,
+    description_th  TEXT,
+    description_en  TEXT,
+    mode            TEXT NOT NULL DEFAULT 'catalog',
+    api_type        TEXT NOT NULL,
+    standard        TEXT,
+    status          TEXT NOT NULL DEFAULT 'active',
+    base_url        TEXT,
+    schema_path     TEXT,
+    version         TEXT NOT NULL DEFAULT '1.0',
+    is_public       INTEGER NOT NULL DEFAULT 1,
+    tags            TEXT DEFAULT '[]',
+    created_by      INTEGER,
+    created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+    updated_at      TEXT,
+    FOREIGN KEY (created_by) REFERENCES users(id)
+);
